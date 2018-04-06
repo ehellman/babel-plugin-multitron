@@ -2,7 +2,7 @@ require('better-log/install')
 
 module.exports = function({ types: t }) {
   return {
-    name: 'multitron', // not required
+    name: 'multitron',
     visitor: {
       CallExpression: path => {
         if (
@@ -15,7 +15,7 @@ module.exports = function({ types: t }) {
             path.node.arguments[1].params[0].properties.map(
               property => props.push(property.value.name),
             )
-			// path.node.arguments.push(JSON.stringify(props))
+			path.node.arguments.push(t.valueToNode(props))
           }
         }
       },

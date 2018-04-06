@@ -1,7 +1,7 @@
 const MyComponent = styled('div', ({ isActive, hasBorder }) => ({
   color: 'red',
   borderColor: 'yellow'
-}), ["isActive","hasBorder"]);
+}), ['isActive', 'hasBorder']);
 
 const MyNormalComponent = styled('div', props => ({
   color: 'blue',

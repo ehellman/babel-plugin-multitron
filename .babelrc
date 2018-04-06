@@ -1,8 +1,10 @@
 {
-  "presets": [{"env": {
-                "targets": {
-                    "node": "current"
-                }
-            }}],
-  "plugins": ["syntax-dynamic-import", "transform-runtime"],
+  "presets": [{
+    "env": {
+      "targets": {
+        "node": "current"
+      }
+    }
+  }],
+  "plugins": ["syntax-dynamic-import", "transform-runtime"]
 }
