@@ -8,7 +8,8 @@ var path = require('path');
 
 require('babel-register');
 
-var pluginPath = require.resolve('../src');
+// var pluginPath = require.resolve('../src');
+var pluginPath = require.resolve('../dist');
 
 function runTests() {
 	var testsPath = __dirname + '/fixtures/';
