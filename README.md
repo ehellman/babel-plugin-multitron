@@ -1,35 +1,19 @@
-# babel-plugin-hello-world
+# babel-plugin-multitron
 
-Extended plugin sample for Babel.
-
-## Installation
-
-```sh
-$ npm install babel-plugin-hello-world
+Converts
+```
+const MyComponent = styled('div', ({ isActive, hasBorder }) => ({
+  color: 'red',
+  borderColor: 'yellow'
+}));
 ```
 
-## Usage
-
-### Via `.babelrc` (Recommended)
-
-**.babelrc**
-
-```json
-{
-  "plugins": ["hello-world"]
-}
+To:
+```
+const MyComponent = styled('div', ({ isActive, hasBorder }) => ({
+  color: 'red',
+  borderColor: 'yellow'
+}), ['isActive', 'hasBorder']);
 ```
 
-### Via CLI
-
-```sh
-$ babel --plugins hello-world script.js
-```
-
-### Via Node API
-
-```javascript
-require('babel').transform('code', {
-  plugins: ['hello-world']
-});
-```
+This means that you can write Styletron components for React and then use them with Vue as well. Win!
